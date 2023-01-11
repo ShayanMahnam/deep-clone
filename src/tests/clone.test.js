@@ -1,3 +1,9 @@
 const { shallowClone, deepClone } = require("../files/clone");
 
-it("does something", () => {});
+describe("shallowClone", () => {
+  it("returns undefined if passed no argument", () => {
+    expect(shallowClone()).toBe(undefined);
+  });
+});
+
+describe("deepClone", () => {});
