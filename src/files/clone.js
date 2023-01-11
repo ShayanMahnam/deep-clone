@@ -6,17 +6,17 @@ function shallowClone(arg) {
 
   // here, argument is either an array or an object
   const newArray = [];
+  const newObject = {};
+
   if (Array.isArray(arg)) {
     arg.forEach((value) => newArray.push(value));
     return newArray;
+  } else {
+    Object.keys(arg).forEach((key) => {
+      newObject[key] = arg[key];
+    });
+    return newObject;
   }
-
-  const newObject = {};
-  Object.keys(arg).forEach((key) => {
-    newObject[key] = arg[key];
-  });
-
-  return newObject;
 }
 
 // Will return a deep clone of any array or object passed to it, does not clone functions
