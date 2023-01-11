@@ -1,3 +1,3 @@
-import { shallowClone, deepClone } from "../files/clone";
+const { shallowClone, deepClone } = require("../files/clone");
 
 it("does something", () => {});

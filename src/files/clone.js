@@ -6,4 +6,4 @@ function deepClone() {
   return null;
 }
 
-export { shallowClone, deepClone };
+module.exports = { shallowClone, deepClone };
